@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SharingService } from './core/sharing/sharing.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'observables';
+  constructor(sharingServices:SharingService) {
+    sharingServices.SharingObservableData = {name: 'La informacion en el observable camnbio'}
+  } 
 }
